@@ -1,12 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "baseBranches": ["main"],
-  "packageRules": [
-    {
-      "extends": ["monorepo:material-ui", "monorepo:emotion"],
-      "groupName": "material-ui and emotion"
-    },
-  ],
   "postUpgradeTasks": {
     "commands": ["{{#each upgrades as |upgrade|}} echo {{upgrade}} > upgrades.json{{/each}}", "echo {{depName}}"],
     "fileFilters": ["upgrades.json"],

@@ -14,7 +14,7 @@
   ],
   "baseBranches": ["main"],
   "postUpgradeTasks": {
-    "commands": ["{{#each upgrades as |upgrade|}} echo {{upgrade}} > upgrades.json{{/each}}", "echo {{depName}}"],
+    "commands": ["{{#each upgrades as |upgrade|}} echo {{{upgrade}}} > upgrades.json{{/each}}", "echo {{depName}}"],
     "fileFilters": ["upgrades.json"],
     "executionMode": "update"
   }

@@ -7,4 +7,5 @@ module.exports = {
   onboarding: true,
   platform: "github",
   repositories: ["MDietz135/renovate-repro-20672"],
+  customEnvVariables: ["upgrades"],
 };

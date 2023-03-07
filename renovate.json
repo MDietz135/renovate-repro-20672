@@ -1,5 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":semanticCommits",
+    "docker:enableMajor",
+    ":disableDependencyDashboard"
+  ],
+  "packageRules": [
+    {
+      "extends": ["monorepo:material-ui", "monorepo:emotion"],
+      "groupName": "material-ui and emotion"
+    }
+  ],
   "baseBranches": ["main"],
   "postUpgradeTasks": {
     "commands": ["{{#each upgrades as |upgrade|}} echo {{upgrade}} > upgrades.json{{/each}}", "echo {{depName}}"],

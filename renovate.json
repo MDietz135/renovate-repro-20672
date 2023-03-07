@@ -2,7 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "baseBranches": ["main"],
   "postUpgradeTasks": {
-    "commands": ["echo {{{stringToPrettyJSON upgrades}}}", "echo {{depName}}"],
+    "commands": ["echo {{#each upgrades as |upgrade|}} > upgrades.json", "echo {{depName}}"],
+    "fileFilters": ["upgrades.json"],
     "executionMode": "update"
   }
 }

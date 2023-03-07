@@ -14,7 +14,7 @@
   ],
   "baseBranches": ["main"],
   "postUpgradeTasks": {
-    "commands": ["{{#each upgrades as |customVariable|}} echo {{{stringToPrettyJSON customVariable}}} {{/each}}"],
+    "commands": ["{{#each upgrades as |customVariable|}} echo '{{customVariable}}' {{/each}}"],
     "executionMode": "update"
   }
 }

@@ -14,7 +14,7 @@
   ],
   "baseBranches": ["main"],
   "postUpgradeTasks": {
-    "commands": ["{{#each upgrades as |upgrade|}} {{#if upgrade.updatedPackageFiles}} {{#each upgrade.updatedPackageFiles as |updatedPackageFile|}} echo '{{updatedPackageFile.path}}' > upgrade.txt {{/each}} {{/if}} {{/each}}"],
+    "commands": ["{{#each upgrades as |upgrade|}} {{#if upgrade.updatedPackageFiles}} {{#each upgrade.updatedPackageFiles as |updatedPackageFile|}} echo 'path: {{updatedPackageFile.path}}' > upgrade.txt {{/each}} {{/if}} {{/each}}"],
     "fileFilters": ["upgrade.txt"],
     "executionMode": "update"
   }
